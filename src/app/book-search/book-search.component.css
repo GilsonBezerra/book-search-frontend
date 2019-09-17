@@ -1,0 +1,39 @@
+.th-price {
+    width: 80px;
+    text-align: center;
+}
+
+.td-price {
+    width: 80px;
+    text-align: center;
+}
+
+.th-data {
+    width: 150px;
+    text-align: center;
+}
+
+.td-data {
+    width: 150px;
+    text-align: center;
+}
+
+.th-author {
+    width: 120px;
+    text-align: center;
+}
+
+.td-author {
+    width: 120px;
+    text-align: center;
+}
+
+.th-email {
+    width: 260px;
+    text-align: center;
+}
+
+.td-email {
+    width: 260px;
+    text-align: center;
+}

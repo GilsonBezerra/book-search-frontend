@@ -1,56 +1,47 @@
-<div class="ui-g">
+<div class="ui-g-">
+
     <div class="ui-g-12">
-        <h1>Add New Book</h1>
-
+        <h1>Book Storage</h1>
     </div>
 
-    <div class="ui-g-12 ui-md-6 ui-fluid">
-        <label>Title </label>
-        <input type="text" pInputText name="title" />
-    </div>
-
-    <div class="ui-g-12 ui-md-6 ui-fluid">
-        <label>Subject </label>
-        <input type="text" pInputText name="subject" />
-    </div>
-
-    <div class="ui-g-12 ui-md-6 ui-fluid">
-        <label>Author </label>
-        <input type="text" pInputText name="author" />
-    </div>
-
-    <div class="ui-g-12 ui-md-3 ui-fluid">
-        <label>Price </label>
-        <input type="text" pInputText name="price" placeholder="0,00" />
-    </div>
-
-    <div class="ui-g-12 ui-md-3 ui-fluid">
-        <label>Publishing Date </label>
-        <p-calendar name="publishing-date"></p-calendar>
-    </div>
-
-    <div class="ui-g-12 ui-md-3 ui-fluid">
-        <label>Publisher </label>
-        <input type="text" pInputText name="publisher" />
-    </div>
-
-    <div class="ui-g-12 ui-md-3 ui-fluid">
-        <label>Publishing Phone </label>
-        <p-inputMask mask="(99) 99999-9999" name="publishing-email"></p-inputMask>
-    </div>
-
-    <div class="ui-g-12 ui-md-3 ui-fluid">
-        <label>Publishing E-mail </label>
-        <input pInputText type="email" validate required>
-    </div>
-
-
-
-</div>
-
-<div class="ui-g">
     <div class="ui-g-12">
-        <button pButton type="submit" label="Save"></button>
+
+        <p-table [value]="books" [paginator]="true" rows="3" [responsive]="true">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Title</th>
+                    <th class="th-author">Subject</th>
+                    <th class="th-author">Author</th>
+                    <th class="th-price">Price</th>
+                    <th class="th-data">Publishing Date</th>
+                    <th>Publisher</th>
+                    <th>Publisher Phone</th>
+                    <th class="th-email">Publisher E-mail</th>
+                </tr>
+
+            </ng-template>
+
+            <ng-template pTemplate="body" let-b>
+
+                <tr>
+                    <td>{{ b.title }}</td>
+                    <td class="td-author">{{ b.subject }}</td>
+                    <td class="td-author">{{ b.author }}</td>
+                    <td class="td-price">{{ b.price }}</td>
+                    <td class="td-data">{{ b.publishingDate }}</td>
+                    <td>{{ b.publisher }}</td>
+                    <td>{{ b.prublisherPhone }}</td>
+                    <td class="td-email">{{ b.publisherEmail }}</td>
+                </tr>
+
+            </ng-template>
+
+
+
+
+        </p-table>
+
+
     </div>
 
 </div>
