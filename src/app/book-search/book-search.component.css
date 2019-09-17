@@ -37,3 +37,22 @@
     width: 260px;
     text-align: center;
 }
+
+.th-subject {
+    width: 200px;
+    text-align: center;
+}
+
+.td-subject {
+    width: 200px;
+    text-align: center;
+}
+
+.t-title {
+    width: 200px;
+    text-align: center;
+}
+
+.td-align {
+    text-align: center;
+}

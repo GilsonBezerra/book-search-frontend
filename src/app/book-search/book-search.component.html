@@ -9,13 +9,13 @@
         <p-table [value]="books" [paginator]="true" rows="3" [responsive]="true">
             <ng-template pTemplate="header">
                 <tr>
-                    <th>Title</th>
-                    <th class="th-author">Subject</th>
+                    <th class="t-title">Title</th>
+                    <th class="th-subject">Subject</th>
                     <th class="th-author">Author</th>
                     <th class="th-price">Price</th>
                     <th class="th-data">Publishing Date</th>
-                    <th>Publisher</th>
-                    <th>Publisher Phone</th>
+                    <th class="td-align">Publisher</th>
+                    <th class="td-author">Phone</th>
                     <th class="th-email">Publisher E-mail</th>
                 </tr>
 
@@ -24,12 +24,12 @@
             <ng-template pTemplate="body" let-b>
 
                 <tr>
-                    <td>{{ b.title }}</td>
-                    <td class="td-author">{{ b.subject }}</td>
+                    <td class="t-title">{{ b.title }}</td>
+                    <td class="td-subject">{{ b.subject }}</td>
                     <td class="td-author">{{ b.author }}</td>
                     <td class="td-price">{{ b.price }}</td>
                     <td class="td-data">{{ b.publishingDate }}</td>
-                    <td>{{ b.publisher }}</td>
+                    <td class="td-align">{{ b.publisher }}</td>
                     <td>{{ b.prublisherPhone }}</td>
                     <td class="td-email">{{ b.publisherEmail }}</td>
                 </tr>
