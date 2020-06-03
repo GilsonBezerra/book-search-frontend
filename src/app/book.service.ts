@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Book } from './models/book.model';
+import { FormControl } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +14,17 @@ export class BookService {
 
   constructor( private http: HttpClient) { }
 
-  bookList() {
+  // GET
+  public bookList() {
     return this.http.get<any[]>( `${this.booksUrl}` );
 
   }
+
+  // POST
+  public save(book: any) {
+    return this.http.post(this.booksUrl, book);
+
+  }
+
 
 }

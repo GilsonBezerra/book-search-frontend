@@ -39,12 +39,12 @@
 }
 
 .th-subject {
-    width: 200px;
+    width: 120px;
     text-align: center;
 }
 
 .td-subject {
-    width: 200px;
+    width: 100px;
     text-align: center;
 }
 
@@ -53,6 +53,12 @@
     text-align: center;
 }
 
+.t-codigo {
+    width: 4.75rem;
+    text-align: center;
+}
+
 .td-align {
+    width: 120px;
     text-align: center;
 }

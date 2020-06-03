@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../book.service';
+import { FormControl } from '@angular/forms';
+import { Book } from '../models/book.model';
 
 @Component({
   selector: 'app-book-search',
@@ -8,6 +10,9 @@ import { BookService } from '../book.service';
 })
 export class BookSearchComponent implements OnInit {
 
+  /**
+   * Variável que guarda os dados retornados do banco
+   */
   books: Array<any>;
 
 
@@ -19,9 +24,12 @@ export class BookSearchComponent implements OnInit {
 
   }
 
-  bookList() {
+  // GET
+  public bookList() {
     this.bookService.bookList()
       .subscribe(data => this.books = data);
   }
+
+ 
 
 }

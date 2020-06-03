@@ -16,6 +16,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BookSearchComponent } from './book-search/book-search.component';
 import { BookAddComponent } from './book-add/book-add.component';
 import { BookService } from './book.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { BookService } from './book.service';
     AppComponent,
     NavbarComponent,
     BookSearchComponent,
-    BookAddComponent
+    BookAddComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +34,8 @@ import { BookService } from './book.service';
     InputMaskModule,
     ButtonModule,
     TableModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [BookService ],
   bootstrap: [AppComponent]
