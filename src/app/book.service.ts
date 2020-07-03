@@ -6,8 +6,11 @@ import { FormControl } from '@angular/forms';
 @Injectable({
   providedIn: 'root'
 })
+  
+  
 
 export class BookService {
+
 
   booksUrl = 'http://localhost:8080/books';
 
@@ -23,6 +26,17 @@ export class BookService {
   // POST
   public save(book: any) {
     return this.http.post(this.booksUrl, book);
+
+  }
+
+  // DELETE
+  public delete(id: number): Promise<void> {
+    return this.http.delete(`${this.booksUrl}/${id}`)
+      .toPromise()
+      .then(() => null)
+      .catch(erro => {
+        return Promise.reject(`Erro ao excluir o  livro ${id}`);
+      });
 
   }
 

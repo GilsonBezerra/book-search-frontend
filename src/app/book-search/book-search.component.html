@@ -6,7 +6,7 @@
 
     <div class="ui-g-12">
 
-        <p-table [value]="books" [paginator]="true" rows="5" [responsive]="true">
+        <p-table [value]="books" [paginator]="true" rows="3" [responsive]="true">
             <ng-template pTemplate="header">
                 <tr>
                     <th class="t-codigo">Code</th>
@@ -18,6 +18,7 @@
                     <th class="td-align">Publisher</th>
                     <th class="td-author">Phone</th>
                     <th class="th-email">Publisher E-mail</th>
+                    <th class="td-author">Action</th>
                 </tr>
 
             </ng-template>
@@ -34,6 +35,11 @@
                     <td class="td-align">{{ b.publisher }}</td>
                     <td class="td-subject">{{ b.publisherPhone }}</td>
                     <td class="td-email">{{ b.publisherEmail }}</td>
+                    <td class="btn__excluir td-author">
+                        <button pButton type="button" label="X" class="ui-button-danger" (click)="excluir(b.id)"></button>
+                        <button pButton type="button" label="E" class="ui-button-success"></button>
+                    </td>
+                    
                 </tr>
 
             </ng-template>

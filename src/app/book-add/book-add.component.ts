@@ -11,30 +11,29 @@ import { BookService } from '../book.service';
 })
 export class BookAddComponent implements OnInit {
 
-  
-
   public books: Array<any>;
 
   public book: any;
 
   constructor(
-    private bookService: BookService
+    private bookService: BookService,
   ) { }
 
   ngOnInit() {
     this.book = {};
   }
 
-
+  // Salva um novo Livro
   public saveNewBook(form: FormGroup) {
-    this.bookService.save(this.book)
+   this.bookService.save(this.book)
       .subscribe(resp => {
         this.books.push(resp);
       });
     form.reset();
     location.reload();
     
-    
   }
+
+
 
 }

@@ -6,14 +6,17 @@ import { Book } from '../models/book.model';
 @Component({
   selector: 'app-book-search',
   templateUrl: './book-search.component.html',
-  styleUrls: ['./book-search.component.css']
+  styleUrls: ['./book-search.component.css'],
+  preserveWhitespaces: true
 })
 export class BookSearchComponent implements OnInit {
+
+  
 
   /**
    * Variável que guarda os dados retornados do banco
    */
-  books: Array<any>;
+  public books: Array<any>;
 
 
   // tslint:disable-next-line: no-shadowed-variable
@@ -28,6 +31,17 @@ export class BookSearchComponent implements OnInit {
   public bookList() {
     this.bookService.bookList()
       .subscribe(data => this.books = data);
+  }
+
+  // DELETE
+  public excluir(id: number) {
+    this.bookService.delete(id)
+      .then( () => {
+        alert('O livro foi excluído com sucesso!');
+        this.bookList();
+      });
+      
+
   }
 
  
